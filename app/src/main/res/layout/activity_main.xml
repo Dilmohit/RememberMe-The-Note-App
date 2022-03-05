@@ -30,5 +30,21 @@
         app:tint="@color/white"
         android:layout_alignParentRight="true" />
 
+    <!--fab to click photos and extract text-->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/idFABCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="18dp"
+        android:backgroundTint="#41B3A3"
+        android:src="@drawable/ic_camera"
+        app:tint="@color/white"
+        android:layout_alignParentRight="true" />
+
 
 </RelativeLayout>

@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         // initializing our variable for our recycler view and fab.
         notesRV = findViewById(R.id.idRVNotes);
         FloatingActionButton fab = findViewById(R.id.idFABAdd);
+        FloatingActionButton fabcam = findViewById(R.id.idFABCamera);
 
         // adding on click listener for floating action button.
         fab.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +44,17 @@ public class MainActivity extends AppCompatActivity {
                 // and passing a constant value in it.
                 Intent intent = new Intent(MainActivity.this, NewNotesActivity.class);
                 startActivityForResult(intent, ADD_NOTES_REQUEST);
+            }
+        });
+
+        // adding on click listener for floating action button.
+        fabcam.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // starting a new activity for adding a new notes
+                // and passing a constant value in it.
+                Intent intent = new Intent(MainActivity.this, ScannerActivity.class);
+                startActivity(intent);
             }
         });
 
