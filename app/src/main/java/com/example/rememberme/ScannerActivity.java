@@ -1,13 +1,11 @@
 package com.example.rememberme;
 
 import static android.Manifest.permission.CAMERA;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -16,11 +14,9 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -50,25 +46,16 @@ public class ScannerActivity extends AppCompatActivity {
         snapBTN = findViewById(R.id.idFABSnap);
         detectBTN = findViewById(R.id.idFABDetect);
 
-        detectBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                detectText();
+        detectBTN.setOnClickListener(v -> detectText());
 
+        snapBTN.setOnClickListener(v -> {
+
+            if (checkPermission()){
+                captureImage();
+            }else {
+                requestPermission();
             }
-        });
 
-        snapBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (checkPermission()){
-                    captureImage();
-                }else {
-                    requestPermission();
-                }
-
-            }
         });
 
     }
@@ -139,12 +126,7 @@ public class ScannerActivity extends AppCompatActivity {
                     }
                 }
             }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                Toast.makeText(ScannerActivity.this, "Fail To Detect Text"+e.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-        });
+        }).addOnFailureListener(e -> Toast.makeText(ScannerActivity.this, "Fail To Detect Text"+e.getMessage(), Toast.LENGTH_SHORT).show());
 
 
     }
