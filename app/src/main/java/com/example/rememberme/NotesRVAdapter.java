@@ -67,15 +67,12 @@ public class NotesRVAdapter extends ListAdapter<NotesModal, NotesRVAdapter.ViewH
             AddNotesTV = itemView.findViewById(R.id.idTVNotesHere);
 
             // adding on click listener for each item of recycler view.
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // inside on click listener we are passing
-                    // position to our item of recycler view.
-                    int position = getAdapterPosition();
-                    if (listener != null && position != RecyclerView.NO_POSITION) {
-                        listener.onItemClick(getItem(position));
-                    }
+            itemView.setOnClickListener(v -> {
+                // inside on click listener we are passing
+                // position to our item of recycler view.
+                int position = getAdapterPosition();
+                if (listener != null && position != RecyclerView.NO_POSITION) {
+                    listener.onItemClick(getItem(position));
                 }
             });
         }
