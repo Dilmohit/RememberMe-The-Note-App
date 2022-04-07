@@ -28,7 +28,9 @@
         android:backgroundTint="#41B3A3"
         android:src="@android:drawable/ic_input_add"
         app:tint="@color/white"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true"
+        android:contentDescription="Button To Add A New Note"
+        tools:targetApi="lollipop" />
 
     <!--fab to click photos and extract text-->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
