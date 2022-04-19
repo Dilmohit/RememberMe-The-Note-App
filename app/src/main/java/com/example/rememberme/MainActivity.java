@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -20,10 +19,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    // creating a variables for our recycler view.
-    private RecyclerView notesRV;
-    private static final int ADD_NOTES_REQUEST = 1;
-    private static final int EDIT_NOTES_REQUEST = 2;
+    public static final int ADD_NOTES_REQUEST = 1;
+    public static final int EDIT_NOTES_REQUEST = 2;
     private ViewModal viewmodal;
 
     @Override
@@ -32,30 +29,25 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // initializing our variable for our recycler view and fab.
-        notesRV = findViewById(R.id.idRVNotes);
+        // creating a variables for our recycler view.
+        RecyclerView notesRV = findViewById(R.id.idRVNotes);
         FloatingActionButton fab = findViewById(R.id.idFABAdd);
         FloatingActionButton fabcam = findViewById(R.id.idFABCamera);
 
         // adding on click listener for floating action button.
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // starting a new activity for adding a new notes
-                // and passing a constant value in it.
-                Intent intent = new Intent(MainActivity.this, NewNotesActivity.class);
-                startActivityForResult(intent, ADD_NOTES_REQUEST);
-            }
+        fab.setOnClickListener(v -> {
+            // starting a new activity for adding a new notes
+            // and passing a constant value in it.
+            Intent intent = new Intent(MainActivity.this, NewNotesActivity.class);
+            startActivityForResult(intent, ADD_NOTES_REQUEST);
         });
 
         // adding on click listener for floating action button.
-        fabcam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // starting a new activity for adding a new notes
-                // and passing a constant value in it.
-                Intent intent = new Intent(MainActivity.this, ScannerActivity.class);
-                startActivity(intent);
-            }
+        fabcam.setOnClickListener(v -> {
+            // starting a new activity for adding a new notes
+            // and passing a constant value in it.
+            Intent intent = new Intent(MainActivity.this, ScannerActivity.class);
+            startActivity(intent);
         });
 
         // setting layout manager to our adapter class.
@@ -80,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
                 adapter.submitList(models);
             }
         });
+
         // below method is use to add swipe to delete method for item of recycler view.
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
             @Override
