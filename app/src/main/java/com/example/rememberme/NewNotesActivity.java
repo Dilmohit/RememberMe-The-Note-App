@@ -1,10 +1,8 @@
 package com.example.rememberme;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -13,7 +11,6 @@ public class NewNotesActivity extends AppCompatActivity {
 
     // creating a variables for our button and edittext.
     private EditText notesEdttxt;
-    private Button notesBtn;
 
     // creating a constant string variable for our notes
     public static final String EXTRA_ID = "EXTRA_ID";
@@ -26,7 +23,7 @@ public class NewNotesActivity extends AppCompatActivity {
 
         // initializing our variables for each view.
         notesEdttxt = findViewById(R.id.idEdtNoteName);
-        notesBtn = findViewById(R.id.idBtnSaveNote);
+        Button notesBtn = findViewById(R.id.idBtnSaveNote);
 
         // below line is to get intent as we
         // are getting data via an intent.
@@ -36,23 +33,21 @@ public class NewNotesActivity extends AppCompatActivity {
             // setting values to our edit text fields.
             notesEdttxt.setText(intent.getStringExtra(EXTRA_NOTE));
         }
+
         // adding on click listener for our save button.
-        notesBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // getting text value from edittext and validating if
-                // the text fields are empty or not.
-                String notesName = notesEdttxt.getText().toString();
-                if (notesName.isEmpty() ) {
-                    Toast.makeText(NewNotesActivity.this, "Please enter something to save", Toast.LENGTH_SHORT).show();
-                }
-                // calling a method to save our note.
-                saveNotes(notesName);
+        notesBtn.setOnClickListener(v -> {
+            // getting text value from edittext and validating if
+            // the text fields are empty or not.
+            String notesName = notesEdttxt.getText().toString();
+            if (notesName.isEmpty() ) {
+                Toast.makeText(NewNotesActivity.this, "Please enter something to save", Toast.LENGTH_SHORT).show();
             }
+            // calling a method to save our note.
+            saveNotes(notesName);
         });
     }
 
-    private void saveNotes(String notesName) {
+    public void saveNotes(String notesName) {
         // inside this method we are passing
         // all the data via an intent.
         Intent data = new Intent();
