@@ -8,13 +8,10 @@ import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,13 +39,6 @@ public class MainActivity extends AppCompatActivity {
             startActivityForResult(intent, ADD_NOTES_REQUEST);
         });
 
-        // adding on click listener for floating action button.
-        fabcam.setOnClickListener(v -> {
-            // starting a new activity for adding a new notes
-            // and passing a constant value in it.
-            Intent intent = new Intent(MainActivity.this, ScannerActivity.class);
-            startActivity(intent);
-        });
 
         // setting layout manager to our adapter class.
         notesRV.setLayoutManager(new LinearLayoutManager(this));
