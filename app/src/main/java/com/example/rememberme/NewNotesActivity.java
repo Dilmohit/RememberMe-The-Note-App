@@ -34,11 +34,6 @@ public class NewNotesActivity extends AppCompatActivity {
             notesEdttxt.setText(intent.getStringExtra(EXTRA_NOTE));
         }
 
-//        Intent in = getIntent();
-//        String easyPuzzle = in.getExtras().getString("epuzzle");
-
-
-
         // adding on click listener for our save button.
         notesBtn.setOnClickListener(v -> {
             // getting text value from edittext and validating if

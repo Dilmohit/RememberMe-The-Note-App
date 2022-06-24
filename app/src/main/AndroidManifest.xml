@@ -13,9 +13,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RememberMe">
         <activity
-            android:name=".ScannerActivity"
-            android:exported="false" />
-        <activity
             android:name=".NewNotesActivity"
             android:exported="false" />
         <activity
