@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
@@ -73,6 +74,17 @@ public class NotesRVAdapter extends ListAdapter<NotesModal, NotesRVAdapter.ViewH
                 int position = getAdapterPosition();
                 if (listener != null && position != RecyclerView.NO_POSITION) {
                     listener.onItemClick(getItem(position));
+                }
+            });
+            
+            
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+
+                    Toast.makeText(itemView.getContext(), "Long Pressed", Toast.LENGTH_SHORT).show();
+                    
+                    return false;
                 }
             });
         }

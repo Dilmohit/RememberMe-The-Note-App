@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         // creating a variables for our recycler view.
         RecyclerView notesRV = findViewById(R.id.idRVNotes);
         FloatingActionButton fab = findViewById(R.id.idFABAdd);
-        FloatingActionButton fabcam = findViewById(R.id.idFABCamera);
 
         // adding on click listener for floating action button.
         fab.setOnClickListener(v -> {
