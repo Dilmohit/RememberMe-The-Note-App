@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class NewNotesActivity extends AppCompatActivity {
@@ -23,7 +24,7 @@ public class NewNotesActivity extends AppCompatActivity {
 
         // initializing our variables for each view.
         notesEdttxt = findViewById(R.id.idEdtNoteName);
-        Button notesBtn = findViewById(R.id.idBtnSaveNote);
+        TextView notesBtn = findViewById(R.id.idBtnSaveNote);
 
         // below line is to get intent as we
         // are getting data via an intent.
