@@ -8,7 +8,6 @@
         android:weightSum="5"
         android:orientation="vertical"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:weightSum="4"
             android:orientation="horizontal"
