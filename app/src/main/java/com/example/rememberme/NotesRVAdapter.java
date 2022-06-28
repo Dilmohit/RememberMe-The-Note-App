@@ -1,5 +1,6 @@
 package com.example.rememberme;
 
+import android.app.Dialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,7 +83,9 @@ public class NotesRVAdapter extends ListAdapter<NotesModal, NotesRVAdapter.ViewH
                 @Override
                 public boolean onLongClick(View v) {
 
-                    Toast.makeText(itemView.getContext(), "Long Pressed", Toast.LENGTH_SHORT).show();
+                    final Dialog dialog = new Dialog(itemView.getContext());
+                    dialog.setContentView(R.layout.long_press_menu_dialog);
+                    dialog.show();
                     
                     return false;
                 }
