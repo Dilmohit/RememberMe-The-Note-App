@@ -8,8 +8,6 @@
 
     <!--edit text for our notes-->
 
-    <!--button for saving data to room database-->
-
     <EditText
         android:id="@+id/idEdtNoteName"
         android:layout_width="0dp"
@@ -23,6 +21,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline3"
         tools:ignore="TouchTargetSizeCheck" />
+
+    <!--textView for saving data to room database-->
 
     <TextView
         android:id="@+id/idBtnSaveNote"
@@ -43,5 +43,15 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="56dp" />
+
+    <ImageView
+        android:id="@+id/IVbackfromNewActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

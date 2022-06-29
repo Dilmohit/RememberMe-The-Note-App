@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // setting layout manager to our adapter class.
-        notesRV.setLayoutManager(new LinearLayoutManager(this));
+        notesRV.setLayoutManager(new GridLayoutManager(this,2));
         notesRV.setHasFixedSize(true);
 
         // initializing adapter for recycler view.

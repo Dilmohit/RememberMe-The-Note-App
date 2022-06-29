@@ -3,8 +3,10 @@ package com.example.rememberme;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ public class NewNotesActivity extends AppCompatActivity {
         // initializing our variables for each view.
         notesEdttxt = findViewById(R.id.idEdtNoteName);
         TextView notesBtn = findViewById(R.id.idBtnSaveNote);
+        ImageView imgback = findViewById(R.id.IVbackfromNewActivity);
 
         // below line is to get intent as we
         // are getting data via an intent.
@@ -46,6 +49,14 @@ public class NewNotesActivity extends AppCompatActivity {
             // calling a method to save our note.
             saveNotes(notesName);
         });
+
+        imgback.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
     }
 
     public void saveNotes(String notesName) {

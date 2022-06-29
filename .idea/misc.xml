@@ -5,10 +5,10 @@
       <map>
         <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/drawable/ic_extract_text.xml" value="0.102" />
         <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/drawable/ic_snap.xml" value="0.158" />
-        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/layout/activity_new_notes.xml" value="0.22" />
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/layout/activity_new_notes.xml" value="0.1" />
         <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/layout/activity_scanner.xml" value="0.14666666666666667" />
-        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/layout/long_press_menu_dialog.xml" value="0.1" />
+        <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/layout/long_press_menu_dialog.xml" value="0.22" />
         <entry key="..\:/Users/Dilmohit/AndroidStudioProjects/RememberMe/app/src/main/res/layout/notes_rv_item.xml" value="0.3333333333333333" />
       </map>
     </option>
